@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import 'react95/dist/themes/original';
+import { createGlobalStyle } from "styled-components";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Cube3D from "./components/Cube3D";
+import BlenderComponent from "./components/BlenderComponent";
+
+const GlobalStyles = createGlobalStyle`
+  body {
+    background-color: teal;
+  }
+`;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyles />
+      <Home />
+      <Projects />
+      <Resume />
+      <Contact />
+      <Cube3D />
+      <BlenderComponent />
     </div>
   );
 }
