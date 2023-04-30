@@ -6,7 +6,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { PerspectiveCamera } from "@react-three/drei";
 const BlenderScene = () => {
 //   const obj = useLoader(OBJLoader, "/office.obj");
-  const gltf = useLoader(GLTFLoader, "/gtr/scene.gltf"); // Update this path to the exported glTF file
+  const gltf = useLoader(GLTFLoader, "/baxter/scene.gltf"); // Update this path to the exported glTF file
   const groupRef = useRef();
 
   useEffect(() => {
@@ -28,8 +28,8 @@ const BlenderScene = () => {
   // Scale and position adjustments
   useEffect(() => {
     if (groupRef.current) {
-      groupRef.current.position.set(0, 0, 0); // Adjust these values for position
-      groupRef.current.scale.set(1, 1, 1); // Adjust these values for scale
+      groupRef.current.position.set(0, -1.5, 0); // Adjust these values for position
+      groupRef.current.scale.set(.1, .1, .1); // Adjust these values for scale
     }
   }, [groupRef]);
 
