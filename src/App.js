@@ -18,12 +18,12 @@ const GlobalStyles = createGlobalStyle`
 function App() {
   return (
     <div className="App">
-      <GlobalStyles />
+      {/* <GlobalStyles /> */}
       <Home />
       <Projects />
       <Resume />
       <Contact />
-      <Cube3D />
+      {/* <Cube3D /> */}
       <BlenderComponent />
     </div>
   );
